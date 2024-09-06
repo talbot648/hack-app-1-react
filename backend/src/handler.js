@@ -7,3 +7,12 @@ module.exports.handle = async (event, context) => {
     }),
   };
 };
+
+module.exports.test = async (event, context) => {
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      hello: "Testing"
+    }),
+  };
+};

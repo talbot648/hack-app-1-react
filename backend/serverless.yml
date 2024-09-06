@@ -24,3 +24,15 @@ functions:
             headers:
               Content-Type: "'application/json'"
               Cache-Control: "'max-age=120'"
+  test:
+    handler: src/handler.test
+    description: Test lambda function
+    events:
+      - http:
+        path: /test
+        method: get
+        cors: true
+        response:
+          headers:
+            Content-Type: "'application/json'"
+            Cache-Contro: "'max-age=120'"

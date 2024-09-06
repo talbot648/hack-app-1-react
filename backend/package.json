@@ -9,6 +9,6 @@
   "author": "Russell Geraghty",
   "license": "MIT",
   "devDependencies": {
-    "serverless-offline": "^12.0.4"
+    "serverless-offline": "^13.8.0"
   }
 }
