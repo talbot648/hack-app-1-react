@@ -26,3 +26,7 @@ module.exports.getImgUrl = async(event, context) => {
     }),
   };
 };
+
+module.exports.textract = async(event, context) => {
+  let testBase64 = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjiM758h8ABZwCu+TmxCcAAAAASUVORK5CYII=';
+}
