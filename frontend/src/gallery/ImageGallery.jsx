@@ -1,13 +1,9 @@
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import ImageTile from "./ImageTile";
-import {deleteFromImageStore, imageUid} from "../upload/imageApi"
+import DeleteAllImagesButton from "./DeleteAllImagesButton"
 
 const ImageGallery = ({ images }) => {
-
-const deleteImages = async () => {
-  deleteFromImageStore(imageUid[0]);
-}
 
 
   return images.length > 0 ?
@@ -20,7 +16,7 @@ const deleteImages = async () => {
         ))}
       </CardGroup>
 
-      <button onClick={deleteFromImageStore}>Delete All</button>
+      <DeleteAllImagesButton />
 
     </>
   ) : (

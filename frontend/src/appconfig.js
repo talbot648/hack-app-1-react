@@ -1,6 +1,7 @@
 const config = {
   imageServiceBaseUrl:
     "https://bjssacademyhackday-a8fqfwapbxfpa4b5.uksouth-01.azurewebsites.net",
+
   teamName: "sinclair",
 
   imageServiceUrl: function () {

@@ -1,12 +1,9 @@
 import config from "../appconfig";
 import { v4 as uuidv4 } from "uuid";
 
-export let imageUid = []
-
 const createUid = (filename) => {
   const fileExtension = filename.split(".").pop();
   const id = uuidv4() + fileExtension;
-  imageUid.push(id);
   return id;
 };
 
@@ -40,31 +37,33 @@ const encodeBase64 = async (file) => {
   requestOptions.headers["Content-Type"] = "application/json";
   requestOptions.body = JSON.stringify(requestBody);
 
-  console.log("POSTing image", fileName, imageUid);
   return fetch(config.imageServiceUrl(), requestOptions);
 };
 
- export const deleteFromImageStore = async (fileName) => {
-  // const imageBase64 = await encodeBase64(file);
-  // const fileName = createUid(file.name);
-
-  // const requestBody = {
-  //   file: imageBase64,
-  //   fileName: fileName,
-  //   fileMimeType: file.type,
-  // };
+ export const deleteAllFromImageStore = async (fileName) => {
 
   const requestOptions = {
     method: "DELETE",
-    headers: {}, // Initialize headers object
+    headers: {},
   };
 
   requestOptions.headers["Content-Type"] = "application/json";
-  // requestOptions.body = JSON.stringify(requestBody);
 
-  console.log("POSTing image", fileName);
   return fetch(config.imageServiceUrl(), requestOptions);
 };
 
+export const deleteAnImageFromImageStore = async (fileName) => {
 
-export default {imageUid, postToImageStore, deleteFromImageStore};
+
+  const requestOptions = {
+    method: "DELETE",
+    headers: {},
+  };
+
+  requestOptions.headers["Content-Type"] = "application/json";
+
+  return fetch(config.imageServiceUrl() + fileName, requestOptions);
+};
+
+
+export default {postToImageStore, deleteAllFromImageStore, deleteAnImageFromImageStore};
