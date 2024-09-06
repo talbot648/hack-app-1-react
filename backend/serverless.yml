@@ -35,7 +35,7 @@ functions:
           response:
             headers:
               Content-Type: "'application/json'"
-              Cache-Contro: "'max-age=120'"
+              Cache-Control: "'max-age=120'"
 
   getimageurl:
     handler: src/handler.getImgUrl
@@ -48,4 +48,4 @@ functions:
         response:
           headers:
             Content-Type: "'application/json'"
-            Cache-Contro: "'max-age=120'"
+            Cache-Control: "'max-age=120'"
