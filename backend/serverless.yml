@@ -49,3 +49,16 @@ functions:
             headers:
               Content-Type: "'application/json'"
               Cache-Control: "'max-age=120'"
+  
+  runTextract:
+    handler: src/handler.runTextract
+    description: run textract on a base64
+    events:
+      - http:
+          path: /run-textract
+          method: get
+          cors: true
+          response:
+            headers:
+              Content-Type: "'application/json'"
+              Cache-Control: "'max-age=120'"
