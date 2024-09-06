@@ -16,3 +16,13 @@ module.exports.test = async (event, context) => {
     }),
   };
 };
+
+module.exports.getImgUrl = async(event, context) => {
+  let imgUrl = event.pathParameters.filename;
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      imgUrl
+    }),
+  };
+};

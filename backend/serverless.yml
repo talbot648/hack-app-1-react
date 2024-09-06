@@ -36,3 +36,16 @@ functions:
             headers:
               Content-Type: "'application/json'"
               Cache-Contro: "'max-age=120'"
+
+  getimageurl:
+    handler: src/handler.getImgUrl
+    description: get image url
+    events:
+      - http:
+        path: /getimageurl/{filename}
+        method: get
+        cors: true
+        response:
+          headers:
+            Content-Type: "'application/json'"
+            Cache-Contro: "'max-age=120'"
