@@ -48,11 +48,11 @@ const encodeBase64 = async (file) => {
   // const imageBase64 = await encodeBase64(file);
   // const fileName = createUid(file.name);
 
-  const requestBody = {
-    // file: imageBase64,
-    fileName: fileName,
-    // fileMimeType: file.type,
-  };
+  // const requestBody = {
+  //   file: imageBase64,
+  //   fileName: fileName,
+  //   fileMimeType: file.type,
+  // };
 
   const requestOptions = {
     method: "DELETE",
@@ -60,7 +60,7 @@ const encodeBase64 = async (file) => {
   };
 
   requestOptions.headers["Content-Type"] = "application/json";
-  requestOptions.body = JSON.stringify(requestBody);
+  // requestOptions.body = JSON.stringify(requestBody);
 
   console.log("POSTing image", fileName);
   return fetch(config.imageServiceUrl(), requestOptions);

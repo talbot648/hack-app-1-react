@@ -5,8 +5,10 @@ import {deleteFromImageStore, imageUid} from "../upload/imageApi"
 
 const ImageGallery = ({ images }) => {
 
+const deleteImages = async () => {
+  deleteFromImageStore(imageUid[0]);
+}
 
-  
 
   return images.length > 0 ?
   (
@@ -18,7 +20,7 @@ const ImageGallery = ({ images }) => {
         ))}
       </CardGroup>
 
-      <button onClick={deleteFromImageStore(imageUid[0])}>Delete All</button>
+      <button onClick={deleteFromImageStore}>Delete All</button>
 
     </>
   ) : (
