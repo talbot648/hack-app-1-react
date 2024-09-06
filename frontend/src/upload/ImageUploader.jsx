@@ -1,6 +1,6 @@
 import "./ImageUploader.css";
 import React, { useState } from "react";
-import postToImageStore from "./imageApi.js";
+import {postToImageStore} from "./imageApi.js";
 
 // Code taken from
 // https://uploadcare.com/blog/how-to-upload-file-in-react/
