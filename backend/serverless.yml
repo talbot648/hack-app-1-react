@@ -42,10 +42,10 @@ functions:
     description: get image url
     events:
       - http:
-        path: /getimageurl/{filename}
-        method: get
-        cors: true
-        response:
-          headers:
-            Content-Type: "'application/json'"
-            Cache-Control: "'max-age=120'"
+          path: /getimageurl/{filename}
+          method: get
+          cors: true
+          response:
+            headers:
+              Content-Type: "'application/json'"
+              Cache-Control: "'max-age=120'"
