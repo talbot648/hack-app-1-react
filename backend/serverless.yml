@@ -29,10 +29,10 @@ functions:
     description: Test lambda function
     events:
       - http:
-        path: /test
-        method: get
-        cors: true
-        response:
-          headers:
-            Content-Type: "'application/json'"
-            Cache-Contro: "'max-age=120'"
+          path: /test
+          method: get
+          cors: true
+          response:
+            headers:
+              Content-Type: "'application/json'"
+              Cache-Contro: "'max-age=120'"
